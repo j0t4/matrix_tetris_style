@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matrix Tetris AI Battle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              matrix: {
+                dark: '#0D0208',
+                base: '#003B00',
+                light: '#008F11',
+                bright: '#00FF41',
+              },
+              tetris: {
+                i: '#00FFFF', // Cyan
+                o: '#FFFF00', // Yellow
+                t: '#FF00FF', // Magenta/Purple
+                s: '#00FF00', // Green
+                z: '#FF0000', // Red
+                j: '#0000FF', // Blue
+                l: '#FF7F00', // Orange
+              }
+            },
+            fontFamily: {
+              mono: ['"Share Tech Mono"', 'monospace'],
+            },
+            animation: {
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #000;
+        color: #00FF41;
+        overflow: hidden;
+      }
+      /* Custom Scrollbar for Matrix feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #001100; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #003B00; 
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #008F11; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
